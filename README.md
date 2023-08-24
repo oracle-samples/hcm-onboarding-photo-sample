@@ -69,13 +69,13 @@ A developer looking to repurpose this sample must be proficient in both OCI Func
 
 **package.json** - This is the manifest file for NodeJS projects. Among other purposes, it lists all the dependencies that need to be installed before the project is run by NodeJS. This file has been modified to include dependencies. *Jimp* image-processing library is the only 3rd party dependency for this sample. 
 
-## **Dependencies**
+## Dependencies
 
 This example requires the following to test:
 - Oracle Human Capital Management cloud. A user account with privileges to access Atom REST API and read and write access to Worker API. Data security privileges might also be necessary, depending on Human Capital Management configuration. Check "References" section for information about Human Capital Management REST API Security.
 - Access to Oracle Cloud Infrastructure (OCI) tenancy and permissions to define IAM policies, create functions and, to create objects in Object Storage.
 
-## **Third Party Dependencies**
+## Third Party Dependencies
 
 Developers choosing to distribute a binary implementation of this project are responsible for obtaining and providing all required licenses and copyright notices for the third-party code used in order to ensure compliance with their respective open source licenses.
 
@@ -85,7 +85,7 @@ The following libraries are required for this code to run.
 - **@fnproject/fdk**, a npm package, available under Apache-2.0 license, at https://www.npmjs.com/package/@fnproject/fdk
 - **http-signature** a npm package, available under MIT license, at https://www.npmjs.com/package/http-signature
  
-## **High Level Steps To Use The Code**
+## High Level Steps To Use The Code
 
 The function in this sample code can be run from command line, using *fn* command on Linux shell. Refer to "References" section below for documentation or blogs for other possible ways to invoke functions.
 
@@ -120,7 +120,7 @@ Create an Object Storage bucket that will be accessible only by the function tha
 
 This Object Storage bucket will have *config.json* file and profile photos for all new hires named after their person numbers (without file extensions such as .jpg) and a default profile photo named *defaultPhoto*, which will be used if a new hire does not have a profile photo in Object Storage.
 
-### Run The Code
+### How to Run
 
 To run the code from Linux command line, make sure that the OCI CLI environment is configured and added to local *fn* deployment as the default context. Then, run this command to invoke the function. 
 ```
@@ -129,7 +129,7 @@ echo -n '<start-up parameters as JSON>' | fn invoke hcmapp hcmProfilePhotoLoader
 ```
 The other option is to expose the function through OCI API gateway, and then to invoke the API gateway REST endpoint. 
 
-## **References**
+## References
 
 [Oracle functions reference.](https://www.oracle.com/cloud-native/functions/)
 
@@ -148,19 +148,20 @@ The other option is to expose the function through OCI API gateway, and then to 
 [A blog that shows how to securely configure API gateway for functions.](https://www.ateam-oracle.com/bicc-securing-extract-logs-rest-services)
 
 
-## **Contributing**
+## Contributing
 
-See [CONTRIBUTING](CONTRIBUTING.md) for details. 
+This project welcomes contributions from the community. Before submitting a pull request, please [review our contribution guide](./CONTRIBUTING.md)
 
-## **Security**
+## Security
 
-For more information on security please see [SECURITY.md](SECURITY.md)
+Please consult the [security guide](./SECURITY.md) for our responsible security vulnerability disclosure process
 
-## **Get Help**
+## Help
 
 Visit Oracle Cloud Customer Connect Community at [Oracle Cloud Customer Connect](https://cloudcustomerconnect.oracle.com) for additional resources and FAQs. 
 
-## **License**
-Copyright (c) 2022, Oracle and/or its affiliates. 
+## License
+Copyright (c) 2022, 2023 Oracle and/or its affiliates. 
 
-The code in this repository is licensed under the Universal Permissive License 1.0. See the [LICENSE](LICENSE.txt) for details.
+Released under the Universal Permissive License v1.0 as shown at
+<https://oss.oracle.com/licenses/upl/>.
